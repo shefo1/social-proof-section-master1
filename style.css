@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+--Very_Dark_Magenta: hsl(300, 43%, 22%);
+--Soft_Pink: hsl(333, 80%, 67%);
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--color-White: hsl(0, 0%, 100%);
+
+}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-size:15px;
+    font-family: "League Spartan", sans-serif;
+}
+body{
+    /* background-color: rgb(255, 250, 242); */
+}
+.container{
+
+width:80%;
+margin:0 auto;
+}
+.up{
+display: flex;
+justify-content: space-between;
+margin-top: 50px;
+}
+
+.content__title{
+    color: var(--Very_Dark_Magenta);
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.left p{
+    margin-top:20px;
+    width:100%;
+    color:var(--Dark-Grayish-Magenta)
+}
+.left{width:45%;}
+.right{width:45%;}
+.box{
+    margin-bottom: 10px;
+    background: var(--Light-Grayish-Magenta);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    color:var(--Very_Dark_Magenta);
+    font-weight: bold; 
+    position:relative;
+    width:100%;
+
+}
+.box:nth-child(1){
+    left:-40px;
+}
+.box:nth-child(2){
+    left:-20px;
+}
+
+.down{
+margin-top: 50px;
+}
+
+.down{
+    gap:15px;
+    display:flex;
+    justify-content: space-around;
+}
+.card{
+    justify-content: space-between;
+    background: var(--Very_Dark_Magenta);
+    color:var(--color-White);
+    border-radius: 10px;
+    padding:15px;
+    margin: 10px 0;
+}
+
+.card .info{
+   width:80%;
+   display:flex;
+   justify-content: space-between;
+}
+
+.card .img{
+    width:60px;
+    border-radius: 50%;
+}
+.info h2 {
+    color:var(--color-White);
+    margin-bottom: 5px;
+}
+.info span{
+    color:var(--Soft_Pink);
+}
+.des{
+    color:var(--color-White);
+    line-height: 1.2;
+    font-size: 14px;
+}
+@media(max-width:767px){
+    .container{
+
+        width:90%;
+    }
+    .content__title{
+        font-size: 40px;
+    }
+    .up{
+        flex-direction: column;
+    }
+    .left{
+        width:100%;
+        text-align: center;
+    }
+    .right{
+        flex-direction: column-reverse;
+        width:100%;
+        margin-top:20px;
+
+    }
+    .box{
+        position: unset;
+        flex-direction: column;
+    }
+    .box p{
+        padding-top: 5px;
+    }
+.down{
+    flex-direction: column;
+
+}
+}
